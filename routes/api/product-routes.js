@@ -19,8 +19,8 @@ router.get('/', async (req, res) => {
     }
     res.status(200).json(products)
   }
-  catch (error) {
-    res.status(500).json(error)
+  catch (err) {
+    res.status(500).json(err)
   }
 });
 
@@ -37,8 +37,8 @@ router.get('/:id', (req, res) => {
     }
     res.status(200).json(products);
   } 
-  catch (error) {
-    res.status(500).json(error)
+  catch (err) {
+    res.status(500).json(err)
   }
 });
 
@@ -127,8 +127,8 @@ router.delete('/:id', async (req, res) => {
     });
     res.status(200).json(deleteProduct + 'successfully deleted');
   } 
-  catch (error) {
-    res.status(500).json(error);
+  catch (err) {
+    res.status(500).json(err);
   }
 });
 

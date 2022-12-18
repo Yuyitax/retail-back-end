@@ -11,15 +11,15 @@ router.get('/', async (req, res) => {
     const category = await Category.findAll({
       include: [{ 
         model: Product 
-      }],
+      }]
     });
     if(!category) {
       res.status(404).json({ message: 'No category was found'})
     }
     res.status(200).json(category)
   }
-  catch (error) {
-    res.status(500).json(error)
+  catch (err) {
+    res.status(500).json(err)
   }
 });
 
@@ -37,8 +37,8 @@ router.get('/:id', async (req, res) => {
     }
     res.status(200).json(category);
   } 
-  catch (error) {
-    res.status(500).json(error)
+  catch (err) {
+    res.status(500).json(err)
   }
 });
 
@@ -66,8 +66,8 @@ router.put('/:id', async (req, res) => {
     }
     res.status(200).json(updateCategory);
   } 
-  catch (error) {
-    res.status(500).json(error)
+  catch (err) {
+    res.status(500).json(err)
   }
 });
 
@@ -80,8 +80,8 @@ router.delete('/:id', async (req, res) => {
       },
     });
     res.status(200).json(deleteCategory + 'successfully deleted');
-  } catch (error) {
-    res.status(500).json(error);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 

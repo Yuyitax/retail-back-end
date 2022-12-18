@@ -18,8 +18,8 @@ router.get('/', (req, res) => {
     }
     res.status(200).json(tags)
   }
-  catch (error) {
-    res.status(500).json(error)
+  catch (err) {
+    res.status(500).json(err)
   }
 });
 
@@ -38,8 +38,8 @@ router.get('/:id', (req, res) => {
     }
     res.status(200).json(tag);
   } 
-  catch (error) {
-    res.status(500).json(error)
+  catch (err) {
+    res.status(500).json(err)
   }
 });
 
@@ -67,8 +67,8 @@ router.put('/:id', (req, res) => {
     }
     res.status(200).json(updateTag);
   } 
-  catch (error) {
-    res.status(500).json(error)
+  catch (err) {
+    res.status(500).json(err)
   }
 });
 
@@ -81,8 +81,8 @@ router.delete('/:id', (req, res) => {
       },
     });
     res.status(200).json(deleteTag + 'successfully deleted');
-  } catch (error) {
-    res.status(500).json(error);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
