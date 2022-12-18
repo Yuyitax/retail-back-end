@@ -15,7 +15,7 @@ Tag.init(
     },
     tag_name: {
       tue: DataTypes.STRING,
-    }
+    },
   },
   {
     sequelize,
